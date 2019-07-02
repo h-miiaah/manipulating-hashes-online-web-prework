@@ -14,8 +14,8 @@ def first_challenge
   }
 
   #your code here
-  contacts.each do |person, data|
-    data.each do |key, value|
+  contacts.each do |person, data| # splitting the contacts hash
+    data.each do |key, value| # splitting the data of the contacts hash
       if key == :favorite_icecream_flavors
         value.delete_if do |flavor|
           flavor == "strawberry"
